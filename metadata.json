@@ -1,0 +1,7 @@
+{
+  "name": "360 Eye",
+  "description": "An advanced AI assistant with multi-modal capabilities including vision, web-grounded search, and real-time reasoning.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
