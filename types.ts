@@ -1,10 +1,16 @@
 
 export type Role = 'user' | 'assistant';
+export type ChatMode = 'lua' | 'html' | 'image';
 
+// Grounding chunk interface updated to handle optional properties from Gemini API
 export interface GroundingChunk {
   web?: {
-    uri: string;
-    title: string;
+    uri?: string;
+    title?: string;
+  };
+  maps?: {
+    uri?: string;
+    title?: string;
   };
 }
 
@@ -20,6 +26,7 @@ export interface Message {
 export interface ChatSession {
   id: string;
   title: string;
+  mode: ChatMode;
   messages: Message[];
   createdAt: number;
 }
